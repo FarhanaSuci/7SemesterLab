@@ -1,0 +1,58 @@
+female(suci).
+female(shreya).
+female(sruti).
+female(tina).
+female(mina).
+female(keya).
+male(khaled).
+male(srubro).
+male(sakib).
+male(mostafiz).
+parent(suci,shreya).
+parent(suci,sruti).
+parent(suci,srubro).
+parent(khaled,shreya).
+parent(khaled,sruti).
+parent(khaled,srubro).
+parent(shreya,tina).
+parent(shreya,mina).
+parent(sruti,keya).
+parent(srubro,sakib).
+parent(srubro,mostafiz).
+mather(X,Y):-
+    parent(X,Y),
+    female(X).
+father(X,Y):-
+    parent(X,Y),
+    male(X).
+sister(X,Y):-
+    parent(Z,X),
+    parent(Z,Y),
+    female(X),
+    X\==Y.
+brother(X,Y):-
+    parent(Z,X),
+    parent(Z,Y),
+    male(X),
+    X\==Y.
+grandparent(X,Y):-
+    parent(Z,Y),
+    parent(X,Z).
+grandfather(X,Y):-
+    parent(Z,Y),
+    parent(X,Z),
+    male(X).
+grandmother(X,Y):-
+    parent(Z,Y),
+    parent(X,Z),
+    female(X).
+couples(X,Y):-
+    parent(X,Z),parent(Y,Z),
+    female(X),male(Y).
+cousine(X,Y):-
+    grandparent(Z,X),
+    grandparent(Z,Y),
+    parent(Z,X)\==parent(Z,Y).
+uncle(X,Z):-
+    parent(Y,Z),
+    brother(X,Y).
