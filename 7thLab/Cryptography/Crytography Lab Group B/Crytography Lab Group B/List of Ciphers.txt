@@ -1,0 +1,27 @@
+Already Done:
+
+1)  Additive/ceaser/shift cipher
+2)  Multiplicative cipher
+3)  Affine cipher
+4)  Autokey cipher
+5)  Playfair cipher
+6)  Hill cipher
+7)  One Time Pad
+8)  Vegenere cipher
+9)  DES
+10) AES
+11) RSA
+12) Rail Fence cipher
+13) Transposition cipher
+14) Double Transposition cipher
+
+To be done:
+
+11) KnapSack
+12) Blowfish
+13) IDEA
+14) CAST
+15) Rabin cryptosystem
+16) El gamal cryptosystem
+17) Digital Signature..................
+
